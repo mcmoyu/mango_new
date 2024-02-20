@@ -1,0 +1,115 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/search/search",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/strategy/strategy",
+			"style" : 
+			{
+				// "navigationStyle": "custom",
+				"navigationBarBackgroundColor": "#F21724",
+				"navigationBarTitleText" : "省钱攻略",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/help/help",
+			"style" : 
+			{
+				"navigationBarBackgroundColor": "#F21724",
+				"navigationBarTitleText" : "帮助中心",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/help/helpcenter",
+			"style" : 
+			{
+				"navigationBarBackgroundColor": "#F21724",
+				"navigationBarTitleText" : "帮助中心",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/category/category",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/lines/lines",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/own/own",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/turnLink/turnLink",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		}
+	],
+	"tabBar": {
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index"
+			},
+			{
+				"text": "分类",
+				"pagePath": "pages/category/category"
+			},
+			{
+				"text": "转链",
+				"pagePath": "pages/turnLink/turnLink"
+			},
+			{
+				"text": "线报",
+				"pagePath": "pages/lines/lines"
+			},
+			{
+				"text": "我的",
+				"pagePath": "pages/own/own"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationStyle": "default",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "Mango慢购",
+		"navigationBarBackgroundColor": "#F21724",
+		"backgroundColor": "#F6F6F6"
+	},
+	"uniIdRouter": {}
+}
