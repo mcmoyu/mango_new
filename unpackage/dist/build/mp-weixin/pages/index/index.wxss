@@ -1,1 +1,1 @@
-.content{width:100%}
+.content{width:100%;overflow:hidden;background-color:#f6f6f6}#swiperView{overflow:hidden;transition:.5s;height:calc(100% - 249rpx)}#swiperView.swiperViewFull{height:calc(100% - 185rpx)}.swiper-item{height:100%}

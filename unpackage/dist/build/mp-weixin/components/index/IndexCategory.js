@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/index/IndexCategory"],{"0ed0":function(t,n,e){"use strict";var r=e("6c5a"),a=e.n(r);a.a},"24aa":function(t,n,e){"use strict";e.r(n);var r=e("602e"),a=e("f128");for(var u in a)["default"].indexOf(u)<0&&function(t){e.d(n,t,(function(){return a[t]}))}(u);e("0ed0");var o=e("f0c5"),c=Object(o["a"])(a["default"],r["b"],r["c"],!1,null,null,null,!1,r["a"],void 0);n["default"]=c.exports},"602e":function(t,n,e){"use strict";e.d(n,"b",(function(){return a})),e.d(n,"c",(function(){return u})),e.d(n,"a",(function(){return r}));var r={vTabs:function(){return Promise.all([e.e("common/vendor"),e.e("uni_modules/v-tabs/components/v-tabs/v-tabs")]).then(e.bind(null,"df0b"))}},a=function(){var t=this.$createElement;this._self._c},u=[]},"6c5a":function(t,n,e){},b6b3:function(t,n,e){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.default=void 0;var r=e("5399"),a={name:"IndexCategory",props:{defaultArr:{type:Array,default:function(){return["精选"]}}},watch:{"category.index":function(t){this.$emit("change",t)}},data:function(){return{category:{index:0,list:[]}}},created:function(){this.getSuperCategory()},methods:{getSuperCategory:function(){var t=this;(0,r.getSuperCategory)().then((function(n){t.category.list=n.data.map((function(t){return t.cname})),t.defaultArr.reverse(),t.defaultArr.forEach((function(n){t.category.list.unshift(n)}))})).catch((function(t){console.log(t)}))}}};n.default=a},f128:function(t,n,e){"use strict";e.r(n);var r=e("b6b3"),a=e.n(r);for(var u in r)["default"].indexOf(u)<0&&function(t){e.d(n,t,(function(){return r[t]}))}(u);n["default"]=a.a}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/index/IndexCategory-create-component',
+    {
+        'components/index/IndexCategory-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("24aa"))
+        })
+    },
+    [['components/index/IndexCategory-create-component']]
+]);

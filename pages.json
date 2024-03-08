@@ -1,6 +1,15 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path" : "pages/index/main",
+			"style" : 
+			{
+				"navigationBarTitleText" : "Mangou",
+				"enablePullDownRefresh" : false
+			}
+		},
+		
+		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationStyle": "custom"
@@ -80,35 +89,35 @@
 			}
 		}
 	],
-	"tabBar": {
-		"list": [
-			{
-				"text": "首页",
-				"pagePath": "pages/index/index"
-			},
-			{
-				"text": "分类",
-				"pagePath": "pages/category/category"
-			},
-			{
-				"text": "转链",
-				"pagePath": "pages/turnLink/turnLink"
-			},
-			{
-				"text": "线报",
-				"pagePath": "pages/lines/lines"
-			},
-			{
-				"text": "我的",
-				"pagePath": "pages/own/own"
-			}
-		]
-	},
+	// "tabBar": {
+	// 	"list": [
+	// 		{
+	// 			"text": "首页",
+	// 			"pagePath": "pages/index/index"
+	// 		},
+	// 		{
+	// 			"text": "分类",
+	// 			"pagePath": "pages/category/category"
+	// 		},
+	// 		{
+	// 			"text": "转链",
+	// 			"pagePath": "pages/turnLink/turnLink"
+	// 		},
+	// 		{
+	// 			"text": "线报",
+	// 			"pagePath": "pages/lines/lines"
+	// 		},
+	// 		{
+	// 			"text": "我的",
+	// 			"pagePath": "pages/own/own"
+	// 		}
+	// 	]
+	// },
 	"globalStyle": {
 		"navigationStyle": "default",
 		"navigationBarTextStyle": "white",
-		"navigationBarTitleText": "Mango慢购",
-		"navigationBarBackgroundColor": "#F21724",
+		"navigationBarTitleText": "Mangou慢购",
+		"navigationBarBackgroundColor": "#F59E00",
 		"backgroundColor": "#F6F6F6"
 	},
 	"uniIdRouter": {}

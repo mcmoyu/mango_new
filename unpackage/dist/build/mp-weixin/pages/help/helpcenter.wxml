@@ -1,0 +1,1 @@
+<view class="content"><view id="question">{{questions[id-1].title}}</view><view id="hr"></view><view id="answer"><rich-text nodes="{{$root.g0}}"></rich-text></view></view>

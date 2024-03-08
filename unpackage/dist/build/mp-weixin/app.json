@@ -1,14 +1,23 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/main",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/strategy/strategy",
+    "pages/help/help",
+    "pages/help/helpcenter",
+    "pages/category/category",
+    "pages/lines/lines",
+    "pages/own/own",
+    "pages/turnLink/turnLink"
   ],
   "subPackages": [],
   "window": {
     "navigationStyle": "default",
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "优爱淘",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Mangou慢购",
+    "navigationBarBackgroundColor": "#F59E00",
+    "backgroundColor": "#F6F6F6"
   },
   "usingComponents": {}
 }

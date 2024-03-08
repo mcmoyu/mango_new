@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "search-bar": "/components/index/SearchBar",
+    "get-coupon-step": "/components/index/GetCouponStep",
+    "index-category": "/components/index/IndexCategory",
+    "index-select": "/components/index/IndexSelect"
+  }
 }

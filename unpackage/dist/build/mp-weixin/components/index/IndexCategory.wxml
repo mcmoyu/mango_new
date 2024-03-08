@@ -1,0 +1,1 @@
+<view><view id="category"><view id="categoryTop"></view><v-tabs bind:input="__e" vue-id="201d851e-1" tabs="{{category.list}}" lineColor="#EF1824" activeColor="#EF1824" value="{{category.index}}" data-event-opts="{{[['^input',[['__set_model',['$0','index','$event',[]],['category']]]]]}}" bind:__l="__l"></v-tabs></view></view>

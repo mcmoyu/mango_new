@@ -1,0 +1,1 @@
+<view class="content"><scroll-view id="scrollView" scroll-y="true"><view><image id="help" src="../../static/help.jpg" mode="widthFix" data-event-opts="{{[['load',[['loadSuccess',['$event']]]]]}}" bindload="__e"></image></view></scroll-view></view>

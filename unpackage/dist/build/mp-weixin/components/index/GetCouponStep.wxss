@@ -1,0 +1,1 @@
+#couponStep{width:100%;height:65rpx;transition:.5s;padding:0 20rpx;text-align:center;background-color:#f21724}#couponStep image{width:100%}#couponStep.couponStepHide{height:0rpx}

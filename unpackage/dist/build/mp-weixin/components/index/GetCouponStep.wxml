@@ -1,0 +1,1 @@
+<view><view class="{{[(isHide)?'couponStepHide':'']}}" id="couponStep"><image src="../../static/index/step.png" mode="widthFix" data-event-opts="{{[['tap',[['toStrategy']]]]}}" bindtap="__e"></image></view></view>

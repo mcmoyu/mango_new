@@ -1,0 +1,1 @@
+#main{padding:20rpx}textarea{width:calc(100% - 20rpx);height:300rpx;padding:10rpx;border-radius:10rpx;border:1px solid #f59e00}#type{text-align:center}#content{margin-top:10rpx}#main button{border:0;outline:none;color:#fff;margin-top:10rpx;background-color:#f59e00}#main .clear{color:#888;background-color:rgba(245,158,0,.5)}#result{margin-top:10rpx}
