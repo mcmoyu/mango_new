@@ -8,6 +8,7 @@
 			<textarea v-show="result" id="result" type="textarea" v-model="result"></textarea>
 			<button v-show="result" @click="copy()" plain="true">立即复制</button>
 			<button v-show="type == 'jd' && result" @click="jumpToJDminiApp">跳转JD小程序</button>
+			<button v-show="type == 'pdd' && result" @click="jumpToJDminiApp">跳转PDD小程序</button>
 		</view>
 	</view>
 </template>
@@ -25,6 +26,10 @@
 					{
 						text: "京东",
 						value: "jd"
+					},
+					{
+						text: "拼多多",
+						value: "pdd"
 					}
 				],
 				content: "",
@@ -166,6 +171,19 @@
 				})
 			},
 			jumpToJDminiApp() {
+				uni.navigateToMiniProgram({
+					appId: "wx91d27dbf599dff74",
+					envVersion: "release",
+					path: "pages/proxy/union/union?spreadUrl=" + encodeURI(this.request),
+					success: (res) => {
+						console.log(res, "res");
+					},
+					fail: (err) => {
+						console.log(err, "err");
+					}
+				})
+			},
+			jumpToPDDminiApp() {
 				uni.navigateToMiniProgram({
 					appId: "wx91d27dbf599dff74",
 					envVersion: "release",
