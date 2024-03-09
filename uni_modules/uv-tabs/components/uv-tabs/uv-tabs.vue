@@ -8,7 +8,7 @@
 					:scroll-left="scrollLeft"
 					scroll-with-animation
 					class="uv-tabs__wrapper__scroll-view"
-					:show-scrollbar="false"
+					:show-scrollbar="true"
 					ref="uv-tabs__wrapper__scroll-view"
 				>
 					<view
@@ -27,6 +27,7 @@
 							:style="[{flex: scrollable ? '' : 1},$uv.addStyle(itemStyle)]"
 							:class="[`uv-tabs__wrapper__nav__item-${index}`, item.disabled && 'uv-tabs__wrapper__nav__item--disabled']"
 						>
+							<image :src="item.icon" mode="scaleToFill" style="margin-right: 5rpx; width: 30rpx; height: 30rpx; margin-top: 5rpx;"></image>
 							<text
 								:class="[item.disabled && 'uv-tabs__wrapper__nav__item__text--disabled']"
 								class="uv-tabs__wrapper__nav__item__text"

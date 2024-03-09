@@ -2,6 +2,6 @@
   "navigationBarTitleText": "Mangou",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "uni-data-select": "/uni_modules/uni-data-select/components/uni-data-select/uni-data-select"
+    "uv-tabs": "/uni_modules/uv-tabs/components/uv-tabs/uv-tabs"
   }
 }

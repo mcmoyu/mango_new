@@ -1,13 +1,14 @@
 <script>
 	export default {
 		onLaunch: function() {
-			console.log('App Launch')
+			uni.BASE_API = "https://mangoapi.ittu.cn";
+			// console.log('App Launch')
 		},
 		onShow: function() {
-			console.log('App Show')
+			// console.log('App Show')
 		},
 		onHide: function() {
-			console.log('App Hide')
+			// console.log('App Hide')
 		}
 	}
 </script>
@@ -28,5 +29,13 @@
 		height: 100%;
 		overflow: hidden;
 		background-color: #F6F6F6;
+	}
+	
+	::-webkit-scrollbar {
+		display: none;
+		width: 0 !important;
+		height: 0 !important;
+		-webkit-appearance: none;
+		background: transparent;
 	}
 </style>
