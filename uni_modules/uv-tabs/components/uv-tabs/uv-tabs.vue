@@ -27,7 +27,7 @@
 							:style="[{flex: scrollable ? '' : 1},$uv.addStyle(itemStyle)]"
 							:class="[`uv-tabs__wrapper__nav__item-${index}`, item.disabled && 'uv-tabs__wrapper__nav__item--disabled']"
 						>
-							<image :src="item.icon" mode="scaleToFill" style="margin-right: 5rpx; width: 30rpx; height: 30rpx; margin-top: 5rpx;"></image>
+							<image :src="item.icon" :style=" index == current ? 'filter: grayscale(0); opacity: 1; transition: 0.5s;' : (item.disabled ? 'filter: grayscale(1); opacity: 0.5; transition: 0.5s;' : 'filter: grayscale(0.9); opacity: 0.5; transition: 0.5s;')" mode="scaleToFill" style="margin-right: 5rpx; width: 30rpx; height: 30rpx; margin-top: 5rpx;"></image>
 							<text
 								:class="[item.disabled && 'uv-tabs__wrapper__nav__item__text--disabled']"
 								class="uv-tabs__wrapper__nav__item__text"

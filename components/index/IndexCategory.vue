@@ -2,7 +2,7 @@
 	<view>
 		<view id="category">
 			<view id="categoryTop"></view>
-			<v-tabs v-model="category.index" :tabs="category.list" lineColor="#EF1824" activeColor="#EF1824"></v-tabs>
+			<v-tabs v-model="category.index" :tabs="category.list" lineColor="#F59E00" activeColor="#F59E00"></v-tabs>
 		</view>
 	</view>
 </template>
@@ -73,6 +73,6 @@
 		position: absolute;
 		background-size: 100%;
 		background-repeat: no-repeat;
-		background-image: url("../../static/index/categoryTop.png");
+		background-image: url("../../static/index/categoryTop_Orange.png");
 	}
 </style>

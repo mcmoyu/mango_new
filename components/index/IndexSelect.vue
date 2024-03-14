@@ -14,13 +14,13 @@
 				<!-- NavIcons -->
 				<view id="nav">
 					<view id="navMain">
-						<view class="navMainItem" v-for="(item, index) in nav.icons" :key="index">
+						<view class="navMainItem" v-for="(item, index) in nav.icons" :key="index" @click="navMainDetail(item)">
 							<image :src="item.img" mode="scaleToFill"></image>
 							<text v-text="item.title"></text>
 						</view>
 					</view>
 					<view id="navSmall">
-						<swiper :indicator-dots="true" indicator-active-color="#F21724" indicator-color="#E0E0E0" :circular="true">
+						<swiper :indicator-dots="true" indicator-active-color="#F59E00" indicator-color="#E0E0E0" :circular="true">
 							<swiper-item>
 								<view class="nav-swiper-item">
 									<view class="navSmallItem" v-for="(item, index) in nav.smallIcons" :key="index"
@@ -50,7 +50,7 @@
 							<view class="halfpriceItem" v-text="item.desc"></view>
 						</swiper-item>
 					</swiper>
-					<uni-icons type="right" size="16" color="#F21724"></uni-icons>
+					<uni-icons type="right" size="16" color="#F59E00"></uni-icons>
 				</view>
 				<!-- 快捷入口 -->
 				<view id="shortcut">
@@ -137,8 +137,6 @@
 
 <script>
 	
-	import $ from "@/lib/jquery.min.js";
-	
 	import {
 		getHomeInfo,
 		getHalfPriceDay,
@@ -163,7 +161,6 @@
 		data() {
 			return {
 				couponStep: {
-					height: 0,
 					hide: false
 				},
 				carouse: {
@@ -220,9 +217,6 @@
 				}
 			},
 			scroll_1(e) {
-				if (!this.couponStep.height) {
-					this.couponStep.height = $("#couponStep").height();
-				}
 				this.couponStep.hide = e.detail.scrollTop > 0;
 			},
 			getHomeInfo() {
@@ -264,6 +258,15 @@
 					console.log(err);
 				})
 			},
+			carouseDetail(item) {
+				if (item.c_type == 4) {
+					this.jumpToApp.TB(item.url);
+				}
+				
+			},
+			navMainDetail(item) {
+				console.log(item);
+			}
 		}
 	}
 </script>
@@ -285,7 +288,7 @@
 		margin-top: 10rpx;
 		border-radius: 20rpx;
 		background-color: rgba(242, 23, 36, 0.1);
-		box-shadow: 0 0 10rpx 3rpx rgba(242, 23, 36, 0.2);
+		box-shadow: 0 0 10rpx 3rpx rgba(245, 158, 0, 0.2);
 	}
 	
 	.carouse-item {
@@ -312,7 +315,7 @@
 	.navMainItem {
 		width: 142rpx;
 		display: flex;
-		color: #F21724;
+		color: #F59E00;
 		position: relative;
 		align-items: center;
 		flex-direction: column;
@@ -381,7 +384,7 @@
 		margin-right: 10rpx;
 		align-items: center;
 		padding-left: 15rpx;
-		background-color: #F21724;
+		background-color: #F59E00;
 	}
 	
 	#halfprice>swiper {
@@ -393,7 +396,7 @@
 	
 	.halfpriceItem {
 		opacity: 0.8;
-		color: #F21724;
+		color: #F59E00;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
@@ -539,7 +542,7 @@
 	}
 	
 	.goodsItemColorText {
-		color: #F21724;
+		color: #F59E00;
 		font-size: 34rpx;
 		font-weight: bold;
 	}
@@ -560,7 +563,7 @@
 	}
 	
 	.goodsItemLabelType {
-		color: #F21724;
+		color: #F59E00;
 		padding: 0 5rpx;
 		font-size: 20rpx;
 		border-radius: 5rpx;
@@ -575,7 +578,7 @@
 	
 	.goodsItemLabelCouponTip {
 		width: 40rpx;
-		color: #F21724;
+		color: #F59E00;
 		text-align: center;
 		position: relative;
 		border-radius: 5rpx;

@@ -214,7 +214,7 @@
 }
 
 .questionTypeSelect {
-	color: #F21724;
+	color: #F59E00;
 	font-weight: bold;
 	background-color: #FFFFFF;
 }
@@ -227,7 +227,7 @@
 	height: 40rpx;
 	margin-top: -20rpx;
 	position: absolute;
-	background-color: #F21724;
+	background-color: #F59E00;
 }
 
 #questionView {

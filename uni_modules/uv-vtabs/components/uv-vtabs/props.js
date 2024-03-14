@@ -10,6 +10,9 @@ export default {
 			type: String,
 			default: 'name'
 		},
+		iconName: {
+			type: String
+		},
 		// 当前选中项
 		current: {
 			type: [Number, String],

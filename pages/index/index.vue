@@ -1,5 +1,6 @@
 <template>
 	<view class="content">
+		<uv-status-bar bgColor="#F59E00"></uv-status-bar>
 		<!-- 搜索栏 -->
 		<SearchBar></SearchBar>
 		<!-- 领券步骤 -->
@@ -37,12 +38,11 @@
 				</view>
 			</swiper-item>
 		</swiper>
+		<!-- <FloatBtn></FloatBtn> -->
 	</view>
 </template>
 
 <script>
-	
-	// import $ from "@/lib/jquery.min.js";
 	
 	import {
 		
@@ -52,13 +52,15 @@
 	import GetCouponStep from "@/components/index/GetCouponStep.vue";
 	import IndexCategory from "@/components/index/IndexCategory.vue";
 	import IndexSelect from "@/components/index/IndexSelect.vue";
+	import FloatBtn from "@/components/FloatBtn.vue";
 	
 	export default {
 		components: {
 			SearchBar,
 			GetCouponStep,
 			IndexCategory,
-			IndexSelect
+			IndexSelect,
+			FloatBtn
 		},
 		data() {
 			return {

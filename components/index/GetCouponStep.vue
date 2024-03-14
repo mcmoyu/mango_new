@@ -37,7 +37,7 @@
 		transition: 0.5s;
 		padding: 0 20rpx;
 		text-align: center;
-		background-color: #F21724;
+		background-color: #F59E00;
 	}
 	
 	#couponStep image {

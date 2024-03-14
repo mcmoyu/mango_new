@@ -37,7 +37,10 @@
                     "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
                     "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
                     "<uses-feature android:name=\"android.hardware.camera\"/>",
-                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.SYSTEM_ALERT_WINDOW\"/>",
+                    "<uses-permission android:name=\"android.permission.SYSTEM_OVERLAY_WINDOW\" />",
+                    "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>"
                 ]
             },
             /* ios打包配置 */
@@ -48,13 +51,29 @@
             "sdkConfigs" : {
                 "ad" : {}
             }
+        },
+        "nativePlugins" : {
+            "HG-FloatButton" : {
+                "__plugin_info__" : {
+                    "name" : "全局浮窗悬浮球",
+                    "description" : "全局浮窗可自定义行为，或返回app主页 群号:219508489",
+                    "platforms" : "Android",
+                    "url" : "https://ext.dcloud.net.cn/plugin?id=2429",
+                    "android_package_name" : "shop.mangou.moyu",
+                    "ios_bundle_id" : "",
+                    "isCloud" : true,
+                    "bought" : 1,
+                    "pid" : "2429",
+                    "parameters" : {}
+                }
+            }
         }
     },
     /* 快应用特有相关 */
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxe6b0e604a5870233",
+        "appid" : "",
         "setting" : {
             "urlCheck" : false,
             "es6" : true,

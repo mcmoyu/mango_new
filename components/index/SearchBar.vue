@@ -1,8 +1,9 @@
 <template>
 	<view>
 		<view id="searchBar">
+			<image id="turn" src="/static/index/turnIcon.png" mode="scaleToFill" @click="toTurn"></image>
 			<view id="search" @click="toSearchView()">
-				<uni-icons id="searchIcon" type="search" color="#F21724" size="40rpx"></uni-icons>
+				<uni-icons id="searchIcon" type="search" color="#F59E00" size="40rpx"></uni-icons>
 				<view id="placeholder">
 					<text v-text="search.text.prefix"></text>
 					<view id="searchIcons">
@@ -25,12 +26,13 @@
 			return {
 				search: {
 					text: {
-						prefix: "输入或粘贴商品标题搜索",
+						prefix: "输入商品标题搜索",
 						suffix: "隐藏优惠",
 					},
 					icons: [
 						"/static/index/icon/taobaoIcon.png",
 						"/static/index/icon/jingdongIcon.png",
+						"/static/index/icon/pinduoduoIcon.png",
 						"/static/index/icon/douyinIcon.png",
 						"/static/index/icon/weipinhuiIcon.png"
 					]
@@ -38,6 +40,11 @@
 			};
 		},
 		methods: {
+			toTurn() {
+				uni.navigateTo({
+					url: "/pages/turnLink/turnLink"
+				})
+			},
 			toSearchView() {
 				uni.navigateTo({
 					url: "/pages/search/search"
@@ -52,13 +59,20 @@
 	}
 </script>
 
-<style>
+<style lang="less">
 	#searchBar {
 		height: 100rpx;
 		display: flex;
 		padding: 0 20rpx;
 		align-items: center;
-		background-color: #F21724;
+		background-color: #F59E00;
+	}
+	
+	#turn {
+		width: 50rpx;
+		height: 50rpx;
+		margin-right: 10rpx;
+		vertical-align: bottom;
 	}
 	
 	#search {

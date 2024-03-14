@@ -14,7 +14,7 @@ function baseRequest(url, method, data, {
 	if (noAuth) {
 		return new Promise((resolve, reject) => {
 			uni.request({
-				url: Url + '/Dtk/' + url,
+				url: Url + url,
 				method: method || 'GET',
 				header: header,
 				data: data || {},
@@ -37,7 +37,7 @@ function baseRequest(url, method, data, {
 				},
 				complete: (res) => {
 					if (uni.getStorageSync("debug")) {
-						console.log("[" + method + "]", Url + '/Dtk/' + url, data, header, res);
+						console.log("[" + method + "]", Url + url, data, header, res);
 					}
 				}
 			})
@@ -55,7 +55,7 @@ const request = {
 		let Url = HTTP_REQUEST_URL;
 		return new Promise((resolve, reject)=>{
 			uni.uploadFile({
-				url: Url + '/api/' + api,
+				url: Url + api,
 				filePath: filePath,
 				name: name,
 				// formData: formData,
@@ -74,7 +74,7 @@ const request = {
 				},
 				complete: (res) => {
 					if (uni.getStorageSync("debug")) {
-						console.log("[" + "upload" + "]", Url + '/api/' + api, formData, header, res);
+						console.log("[" + "upload" + "]", Url + api, formData, header, res);
 					}
 				}
 			})

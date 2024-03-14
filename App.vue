@@ -1,7 +1,19 @@
 <script>
 	export default {
 		onLaunch: function() {
-			uni.BASE_API = "https://mangoapi.ittu.cn";
+			uni.BASE_API = "https://api.mangou.shop";
+			
+			uni.jumpToAppByApp = (urlScheme) => {
+				// #ifdef APP
+				plus.runtime.openURL(urlScheme, (err) => {
+					uni.showModal({
+						title: "err",
+						content: JSON.stringify(err)
+					});
+				});
+				// #endif
+			}
+			
 			// console.log('App Launch')
 		},
 		onShow: function() {
@@ -28,7 +40,7 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		background-color: #F6F6F6;
+		/* background-color: #F6F6F6; */
 	}
 	
 	::-webkit-scrollbar {

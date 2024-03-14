@@ -32,6 +32,10 @@
 					v-if="index == activeIndex"
 					:style="[$uv.addStyle(barItemActiveLineStyle)]"
 				></view>
+				<image :class="[
+					'uv-vtabs__bar-item--icon',
+					index == activeIndex && 'uv-vtabs__bar-item-active--icon'
+				]" :src="item[iconName]" mode="scaleToFill"></image>
 				<text 
 					:class="[
 						'uv-vtabs__bar-item--value',
@@ -400,6 +404,12 @@
 				align-items: center;
 				justify-content: center;
 				padding: 35rpx 12rpx 35rpx 20rpx;
+				&--icon {
+					width: 45rpx;
+					height: 45rpx;
+					margin-right: 5rpx;
+					vertical-align: bottom;
+				}
 				&--value {
 					/* #ifdef APP-NVUE */
 					padding: 0 12rpx;
@@ -409,6 +419,9 @@
 				}
 				&-active {
 					background: #fff;
+					&--icon {
+						
+					}
 					&--value {
 						color: $uv-primary;
 					}
