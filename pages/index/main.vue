@@ -33,7 +33,7 @@
 					},{
 						name: "东东",
 						code: "jd",
-						urlScheme: "jd",
+						urlScheme: "",
 						disabled: false,
 						icon: "/static/main/jd.png",
 						placeholder: "请粘贴从京东App分享的链接文案"
@@ -358,6 +358,10 @@
 				})
 			},
 			test() {
+				// jd
+				/*
+					{"category":"jump","des":"m","sourceValue":"babel-act","sourceType":"babel","url":"https://u.jd.com/3I1C9vl","M_sourceFrom":"h5auto","msf_type":"auto"}
+				*/
 				plus.runtime.openURL(this.content.replace(/https?/i, this.list[this.current].urlScheme), (err) => {
 					uni.showModal({
 						title: "err",
