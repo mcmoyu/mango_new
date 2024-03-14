@@ -5,13 +5,14 @@
 				<uv-tabs :list="list" :current="current" lineColor="#F59E00" lineWidth="30" lineHeight="5" activeStyle="font-weight: bold; color: #F59E00;" @change="change"></uv-tabs>
 			</view>
 			<!-- <uni-data-select id="type" v-model="type" :localdata="types" :clear="false"></uni-data-select> -->
-			<textarea id="content" type="textarea" :placeholder="list[current].placeholder" v-model.trim="content" @input="input"></textarea>
+			<textarea id="content" type="textarea" maxlength="-1" :placeholder="list[current].placeholder" v-model.trim="content" @input="input"></textarea>
 			<button class="clear" @click="content = ''">清空内容</button>
 			<button @click="turn()" plain="true" :loading="isTurn" v-text="turnBtnText.list[turnBtnText.index]"></button>
-			<textarea v-show="result && content" id="result" type="textarea" v-model="result"></textarea>
+			<textarea v-show="result && content" maxlength="-1" id="result" type="textarea" v-model="result"></textarea>
 			<button v-show="result && content" @click="copy()" plain="true">立即复制</button>
 			<button v-show="list[current].code == 'jd' && result && content" @click="jumpToJDminiApp" :disabled="hasCoupon.jd == -1">跳转JD小程序</button>
 			<button v-show="list[current].code == 'pdd' && result && content" @click="jumpToPDDminiApp">跳转PDD小程序</button>
+			<button @click="test()">测试</button>
 		</view>
 	</view>
 </template>
@@ -25,42 +26,49 @@
 					{
 						name: "淘淘",
 						code: "tb",
+						urlScheme: "taobao",
 						disabled: false,
 						icon: "/static/main/tb.png",
 						placeholder: "请粘贴从淘宝App分享的链接/淘口令"
 					},{
 						name: "东东",
 						code: "jd",
+						urlScheme: "jd",
 						disabled: false,
 						icon: "/static/main/jd.png",
 						placeholder: "请粘贴从京东App分享的链接文案"
 					},{
 						name: "多多",
 						code: "pdd",
+						urlScheme: "/dtk/getPddGoodsPromGenerate的tzSchemaUrl字段",
 						disabled: false,
 						icon: "/static/main/pdd.png",
 						placeholder: "请粘贴从拼多多App分享的链接地址"
 					},{
 						name: "抖抖",
 						code: "dy",
+						urlScheme: "/dtk/getTiktokKolProductShare的dyDeeplink字段",
 						disabled: false,
 						icon: "/static/main/dy.png",
 						placeholder: "请粘贴从抖音App分享的链接文案"
 					},{
 						name: "团团",
 						code: "mt",
+						urlScheme: "imeituan",
 						disabled: true,
 						icon: "/static/main/mt.png",
 						placeholder: ""
 					},{
 						name: "么么",
 						code: "elm",
+						urlScheme: "",
 						disabled: true,
 						icon: "/static/main/elm.png",
 						placeholder: ""
 					},{
 						name: "唯唯",
 						code: "wph",
+						urlScheme: "",
 						disabled: true,
 						icon: "/static/main/wph.png",
 						placeholder: ""
@@ -348,6 +356,14 @@
 						console.log(err, "err");
 					}
 				})
+			},
+			test() {
+				plus.runtime.openURL(this.content.replace(/https?/i, this.list[this.current].urlScheme), (err) => {
+					uni.showModal({
+						title: "err",
+						content: JSON.stringify(err)
+					});
+				});
 			}
 		}
 	}
@@ -364,6 +380,9 @@ textarea {
 	/* #endif */
 	/* #ifdef MP-WEIXIN */
 	width: calc(100% - 20rpx);
+	/* #endif */
+	/* #ifdef APP-PLUS */
+	width: 100%;
 	/* #endif */
 	height: 300rpx;
 	padding: 10rpx;
