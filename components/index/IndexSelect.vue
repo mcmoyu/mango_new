@@ -262,7 +262,6 @@
 				if (item.c_type == 4) {
 					this.jumpToApp.TB(item.url);
 				}
-				
 			},
 			navMainDetail(item) {
 				console.log(item);
@@ -273,7 +272,13 @@
 
 <style>
 	.swiper-item {
+		/* #ifdef H5 */
 		height: 100%;
+		/* #endif */
+		/* #ifdef APP */
+		height: calc(100% - 40rpx);
+		/* height: calc(100% - 100rpx); */
+		/* #endif */
 	}
 	
 	.swiper-item-view {
@@ -462,6 +467,7 @@
 		height: 50rpx;
 		min-width: 50rpx;
 		margin-right: 5rpx;
+		border-radius: 10rpx;
 	}
 	
 	.shortcutItemTitle {

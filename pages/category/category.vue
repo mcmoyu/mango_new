@@ -59,7 +59,7 @@
 			},
 			detail(item) {
 				uni.navigateTo({
-					url: "/pages/category/goodsList?id" + item.subcid + "&name=" + encodeURIComponent(item.subcname)
+					url: "/pages/category/goodsList?id=" + item.subcid + "&name=" + encodeURIComponent(item.subcname)
 				})
 			}
 		}
@@ -83,7 +83,12 @@
 
 .item {
 	margin: 10rpx;
+	/* #ifdef APP */
 	width: 161rpx;
+	/* #endif */
+	/* #ifdef H5 */
+	width: 157rpx;
+	/* #endif */
 	display: flex;
 	height: 200rpx;
 	align-items: center;

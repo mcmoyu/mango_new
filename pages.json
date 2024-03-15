@@ -106,13 +106,13 @@
 			"style" : 
 			{
 				"navigationStyle": "default",
-				"navigationBarTitleText" : "",
+				"navigationBarTitleText" : "商品子类名称",
 				"enablePullDownRefresh" : false
 			}
 		}
 	],
 	"tabBar": {
-		"color": "8a8a8a",
+		"color": "#8a8a8a",
 		"selectedColor": "#F59E00",
 		"fontSize": "12",
 		"list": [

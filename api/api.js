@@ -1,4 +1,5 @@
 import request from "@/api/request.js";
+import { param } from "jquery";
 
 /**
  * 获取首页轮播图
@@ -90,4 +91,12 @@ export function getRankingList(rankType = 1, pageId = 1, pageSize = 20) {
  */
 export function getHotActibity() {
 	return request.get("/dtk/getActivityCatalogue")
+}
+
+/**
+ * 获取商品列表
+ * @param {Object} param 
+ */
+export function getGoodsList(param) {
+	return request.get("/dtk/getGoodsList", param);
 }
